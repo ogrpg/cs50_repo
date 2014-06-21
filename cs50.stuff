@@ -1,0 +1,21 @@
+#include <cs50.h>
+#include <stdio.h>
+#include <string.h>
+
+//included string lib to work with string chr$
+//program will recieve string to print one chr$ at a time
+
+int main(void)
+{
+//recieve string
+    string s = GetString();
+    
+//premptive crash prevention from a wonky returned value of string
+    if (s != NULL)
+    {
+        for (int i = 0, n = strlen(s); i < n; i++)
+        {
+            printf("%c\n",s[i]);
+        }
+    }
+}
